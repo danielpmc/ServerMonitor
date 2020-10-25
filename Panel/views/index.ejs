@@ -1,0 +1,172 @@
+<%- include("./partials/header.ejs", { botInfo: false, Title: "Home", Avatar: "", Redirect: "/me" }) %>
+
+<meta http-equiv="refresh" content="10"/>
+<br><br><br>
+
+<br><br><br>
+
+        <style>
+            .container {
+                text-align: center;
+                align-items: center;
+                position: fixed;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+            }
+            .large {
+                font-size: 4em;
+            }
+            
+</style>
+  <div class="">
+        <div class="row justify-content-md-center">
+          <a style="color:white;" href="https://danbot.host/stats/Node1"><h3>Node 1 Stats</h3></a>
+        </div>
+        <div class="row justify-content-md-center">
+          <div class="col-5 text-nowrap"><i class="fa fa-fw fa-tasks" aria-hidden="true"></i> <strong>CPU:</strong> <%- nodeData.fetch("Node1.cpu") %> (Cores: <%- nodeData.fetch("Node1.cpucores") %>, Threads: <%- nodeData.fetch("Node1.cputhreads") %>)</div>
+        </div>
+        <div class="row justify-content-md-center">
+          <div class="col-5 text-nowrap"><i class="fa fa-fw fa-tasks" aria-hidden="true"></i> <strong>CPU Load:</strong> <%- nodeData.fetch("Node1.cpuload") %>%</div>
+        </div>
+        <div class="row justify-content-md-center">
+          <div class="col-5 text-nowrap"><i class="fa fa-fw fa-tasks" aria-hidden="true"></i> <strong>RAM (Used/Total)</strong> <%- nodeData.fetch("Node1.memused") %> / <%- nodeData.fetch("Node1.memtotal") %></div>
+        </div>
+        <div class="row justify-content-md-center">
+          <div class="col-5 text-nowrap"><i class="fa fa-fw fa-tasks" aria-hidden="true"></i> <strong>SWAP (Used/Total)</strong> <%- nodeData.fetch("Node1.swapused") %> / <%- nodeData.fetch("Node1.swaptotal") %></div>
+        </div>
+        <div class="row justify-content-md-center">
+          <div class="col-5 text-nowrap"><i class="fa fa-fw fa-floppy-o" aria-hidden="true"></i> <strong>Host storage drive (Used/Total):</strong> <%- nodeData.fetch("Node1.diskused") %> / <%- nodeData.fetch("Node1.disktotal") %></div>
+        </div>
+        <div class="row justify-content-md-center">
+          <div class="col-5 text-nowrap"><i class="fa fa-download" aria-hidden="true"></i> <strong>Network: Rx:</strong> <%- nodeData.fetch("Node1.netrx") %> <strong>Tx:</strong> <%- nodeData.fetch("Node1.nettx") %> </div>
+        </div>
+        <div class="row justify-content-md-center">
+          <div class="col-5 text-nowrap"><i class="fa fa-fw fa-clock-o" aria-hidden="true"></i> <strong>Uptime:</strong> <%- nodeData.fetch("Node1.osuptime") %></div>
+        </div>
+        <div class="row justify-content-md-center">
+          <div class="col-5 text-nowrap"><i class="fa fa-fw fa-clock-o" aria-hidden="true"></i> <strong>Last Updated:</strong> <%- nodeData.fetch("Node1.updatetime") %></div>
+        </div>
+        <div class="row justify-content-md-center">
+          <div class="col-5 text-nowrap"><i class="fa fa-fw fa-clock-o" aria-hidden="true"></i> <strong>Speedtest (Updates every 6hours) | Ping:</strong> <%- nodeData.fetch("Node1-speedtest.ping") %>ms <br> <strong>Download:</strong> <%- nodeData.fetch("Node1-speedtest.download") %>Mbps, <strong>Upload: </strong><%- nodeData.fetch("Node1-speedtest.upload") %>Mbps, <strong>Last Updated:</strong> <%- nodeData.fetch("Node1-speedtest.updatetime") %></div>
+        </div>
+
+        <div class="row justify-content-md-center">
+          <a style="color:white;" href="https://danbot.host/stats/Node2"><h3>Node 2 Stats</h3></a>
+        </div>
+        <div class="row justify-content-md-center">
+          <div class="col-5 text-nowrap"><i class="fa fa-fw fa-tasks" aria-hidden="true"></i> <strong>CPU:</strong> <%- nodeData.fetch("Node2.cpu") %> (Cores: <%- nodeData.fetch("Node2.cpucores") %>, Threads: <%- nodeData.fetch("Node2.cputhreads") %>)</div>
+        </div>
+        <div class="row justify-content-md-center">
+          <div class="col-5 text-nowrap"><i class="fa fa-fw fa-tasks" aria-hidden="true"></i> <strong>CPU Load:</strong> <%- nodeData.fetch("Node2.cpuload") %>%</div>
+        </div>
+        <div class="row justify-content-md-center">
+          <div class="col-5 text-nowrap"><i class="fa fa-fw fa-tasks" aria-hidden="true"></i> <strong>RAM (Used/Total)</strong> <%- nodeData.fetch("Node2.memused") %> / <%- nodeData.fetch("Node2.memtotal") %></div>
+        </div>
+        <div class="row justify-content-md-center">
+          <div class="col-5 text-nowrap"><i class="fa fa-fw fa-tasks" aria-hidden="true"></i> <strong>SWAP (Used/Total)</strong> <%- nodeData.fetch("Node2.swapused") %> / <%- nodeData.fetch("Node2.swaptotal") %></div>
+        </div>
+        <div class="row justify-content-md-center">
+          <div class="col-5 text-nowrap"><i class="fa fa-fw fa-floppy-o" aria-hidden="true"></i> <strong>Host storage drive (Used/Total):</strong> <%- nodeData.fetch("Node2.diskused") %> / <%- nodeData.fetch("Node2.disktotal") %></div>
+        </div>
+        <div class="row justify-content-md-center">
+          <div class="col-5 text-nowrap"><i class="fa fa-download" aria-hidden="true"></i> <strong>Network: Rx:</strong> <%- nodeData.fetch("Node2.netrx") %> <strong>Tx:</strong> <%- nodeData.fetch("Node2.nettx") %> </div>
+        </div>
+        <div class="row justify-content-md-center">
+          <div class="col-5 text-nowrap"><i class="fa fa-fw fa-clock-o" aria-hidden="true"></i> <strong>Uptime:</strong> <%- nodeData.fetch("Node2.osuptime") %></div>
+        </div>
+        <div class="row justify-content-md-center">
+          <div class="col-5 text-nowrap"><i class="fa fa-fw fa-clock-o" aria-hidden="true"></i> <strong>Last Updated:</strong> <%- nodeData.fetch("Node2.updatetime") %></div>
+        </div>
+        <div class="row justify-content-md-center">
+          <div class="col-5 text-nowrap"><i class="fa fa-fw fa-clock-o" aria-hidden="true"></i> <strong>Speedtest (Updates every 6hours) | Ping:</strong> <%- nodeData.fetch("Node2-speedtest.ping") %>ms <br> <strong>Download:</strong> <%- nodeData.fetch("Node2-speedtest.download") %>Mbps, <strong>Upload: </strong><%- nodeData.fetch("Node2-speedtest.upload") %>Mbps, <strong>Last Updated:</strong> <%- nodeData.fetch("Node2-speedtest.updatetime") %></div>
+        </div>
+
+        <div class="row justify-content-md-center">
+          <a style="color:white;" href="https://danbot.host/stats/Node3"><h3>Node 3 Stats</h3></a>
+        </div>
+        <div class="row justify-content-md-center">
+          <div class="col-5 text-nowrap"><i class="fa fa-fw fa-tasks" aria-hidden="true"></i> <strong>CPU:</strong> <%- nodeData.fetch("Node3.cpu") %> (Cores: <%- nodeData.fetch("Node3.cpucores") %>, Threads: <%- nodeData.fetch("Node3.cputhreads") %>)</div>
+        </div>
+        <div class="row justify-content-md-center">
+          <div class="col-5 text-nowrap"><i class="fa fa-fw fa-tasks" aria-hidden="true"></i> <strong>CPU Load:</strong> <%- nodeData.fetch("Node3.cpuload") %>%</div>
+        </div>
+        <div class="row justify-content-md-center">
+          <div class="col-5 text-nowrap"><i class="fa fa-fw fa-tasks" aria-hidden="true"></i> <strong>RAM (Used/Total)</strong> <%- nodeData.fetch("Node3.memused") %> / <%- nodeData.fetch("Node3.memtotal") %></div>
+        </div>
+        <div class="row justify-content-md-center">
+          <div class="col-5 text-nowrap"><i class="fa fa-fw fa-tasks" aria-hidden="true"></i> <strong>SWAP (Used/Total)</strong> <%- nodeData.fetch("Node3.swapused") %> / <%- nodeData.fetch("Node3.swaptotal") %></div>
+        </div>
+        <div class="row justify-content-md-center">
+          <div class="col-5 text-nowrap"><i class="fa fa-fw fa-floppy-o" aria-hidden="true"></i> <strong>Host storage drive (Used/Total):</strong> <%- nodeData.fetch("Node3.diskused") %> / <%- nodeData.fetch("Node3.disktotal") %></div>
+        </div>
+        <div class="row justify-content-md-center">
+          <div class="col-5 text-nowrap"><i class="fa fa-download" aria-hidden="true"></i> <strong>Network: Rx:</strong> <%- nodeData.fetch("Node3.netrx") %> <strong>Tx:</strong> <%- nodeData.fetch("Node3.nettx") %> </div>
+        </div>
+        <div class="row justify-content-md-center">
+          <div class="col-5 text-nowrap"><i class="fa fa-fw fa-clock-o" aria-hidden="true"></i> <strong>Uptime:</strong> <%- nodeData.fetch("Node3.osuptime") %></div>
+        </div>
+        <div class="row justify-content-md-center">
+          <div class="col-5 text-nowrap"><i class="fa fa-fw fa-clock-o" aria-hidden="true"></i> <strong>Last Updated:</strong> <%- nodeData.fetch("Node3.updatetime") %></div>
+        </div>
+        <div class="row justify-content-md-center">
+          <div class="col-5 text-nowrap"><i class="fa fa-fw fa-clock-o" aria-hidden="true"></i> <strong>Speedtest (Updates every 6hours) | Ping:</strong> <%- nodeData.fetch("Node3-speedtest.ping") %>ms <br> <strong>Download:</strong> <%- nodeData.fetch("Node3-speedtest.download") %>Mbps, <strong>Upload: </strong><%- nodeData.fetch("Node3-speedtest.upload") %>Mbps, <strong>Last Updated:</strong> <%- nodeData.fetch("Node3-speedtest.updatetime") %></div>
+        </div>
+
+        <div class="row justify-content-md-center">
+          <a style="color:white;" href="https://danbot.host/stats/Node4"><h3>Node 4 Stats</h3></a>
+        </div>
+        <div class="row justify-content-md-center">
+          <div class="col-5 text-nowrap"><i class="fa fa-fw fa-tasks" aria-hidden="true"></i> <strong>CPU:</strong> <%- nodeData.fetch("Node4.cpu") %> (Cores: <%- nodeData.fetch("Node4.cpucores") %>, Threads: <%- nodeData.fetch("Node4.cputhreads") %>)</div>
+        </div>
+        <div class="row justify-content-md-center">
+          <div class="col-5 text-nowrap"><i class="fa fa-fw fa-tasks" aria-hidden="true"></i> <strong>CPU Load:</strong> <%- nodeData.fetch("Node4.cpuload") %>%</div>
+        </div>
+        <div class="row justify-content-md-center">
+          <div class="col-5 text-nowrap"><i class="fa fa-fw fa-tasks" aria-hidden="true"></i> <strong>RAM (Used/Total)</strong> <%- nodeData.fetch("Node4.memused") %> / <%- nodeData.fetch("Node4.memtotal") %></div>
+        </div>
+        <div class="row justify-content-md-center">
+          <div class="col-5 text-nowrap"><i class="fa fa-fw fa-tasks" aria-hidden="true"></i> <strong>SWAP (Used/Total)</strong> <%- nodeData.fetch("Node4.swapused") %> / <%- nodeData.fetch("Node4.swaptotal") %></div>
+        </div>
+        <div class="row justify-content-md-center">
+          <div class="col-5 text-nowrap"><i class="fa fa-fw fa-floppy-o" aria-hidden="true"></i> <strong>Host storage drive (Used/Total):</strong> <%- nodeData.fetch("Node4.diskused") %> / <%- nodeData.fetch("Node4.disktotal") %></div>
+        </div>
+        <div class="row justify-content-md-center">
+          <div class="col-5 text-nowrap"><i class="fa fa-download" aria-hidden="true"></i> <strong>Network: Rx:</strong> <%- nodeData.fetch("Node4.netrx") %> <strong>Tx:</strong> <%- nodeData.fetch("Node4.nettx") %> </div>
+        </div>
+        <div class="row justify-content-md-center">
+          <div class="col-5 text-nowrap"><i class="fa fa-fw fa-clock-o" aria-hidden="true"></i> <strong>Uptime:</strong> <%- nodeData.fetch("Node4.osuptime") %></div>
+        </div>
+        <div class="row justify-content-md-center">
+          <div class="col-5 text-nowrap"><i class="fa fa-fw fa-clock-o" aria-hidden="true"></i> <strong>Last Updated:</strong> <%- nodeData.fetch("Node4.updatetime") %></div>
+        </div>
+        <div class="row justify-content-md-center">
+          <div class="col-5 text-nowrap"><i class="fa fa-fw fa-clock-o" aria-hidden="true"></i> <strong>Speedtest (Updates every 6hours) | Ping:</strong> <%- nodeData.fetch("Node4-speedtest.ping") %>ms <br> <strong>Download:</strong> <%- nodeData.fetch("Node4-speedtest.download") %>Mbps, <strong>Upload: </strong><%- nodeData.fetch("Node4-speedtest.upload") %>Mbps, <strong>Last Updated:</strong> <%- nodeData.fetch("Node4-speedtest.updatetime") %></div>
+        </div>
+        
+    </div>
+    
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<script>
+document.onkeydown = function(e) {
+        if (e.ctrlKey && 
+            (e.keyCode === 67 || 
+             e.keyCode === 86 || 
+             e.keyCode === 85 || 
+             e.keyCode === 117)) {
+            return false;
+        } else {
+            return true;
+        }
+};
+$(document).keypress("u",function(e) {
+  if(e.ctrlKey)
+  {
+return false;
+}
+else
+{
+return true;
+}
+});
+</script>

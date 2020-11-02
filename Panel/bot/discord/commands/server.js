@@ -90,6 +90,7 @@ exports.run = async (client, message, args) => {
                             .addField(`__**FAILED:**__`, "Please contact a host admin. \n\nError: `" + error + "`")
                         message.channel.send(embed1)
                         message.channel.send("<@137624084572798976> Issue when creating server. \nResponse: `" + error + "`")
+                        message.channel.send("This **could** mean Ports are full, Panel is down, Node is out of resources")
                         
                     })
                 }

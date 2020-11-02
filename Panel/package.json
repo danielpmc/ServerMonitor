@@ -1,29 +1,61 @@
 {
-  "name": "servermonitor",
-  "version": "1.0.0",
-  "description": "A software that runs a local web server to show system info, E.G: CPU Graph, Memory Graph along with more helpful info. Good for anyone who has multiple servers/computers like me and needs some way to monitor them from a single or multiple computers. ",
+  "name": "danbothostingstats",
+  "version": "1.0.4",
+  "description": "A modified version of ServerMonitor by danielpmc. ",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/danielpmc/ServerMonitor.git"
+    "url": "git+https://github.com/danbot-devs/DanBotHostingStats.git"
   },
-  "author": "danielpmc",
+  "author": "danbot-devs",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/danielpmc/ServerMonitor/issues"
+    "url": "https://github.com/danbot-devs/DanBotHostingStats/issues"
   },
-  "homepage": "https://github.com/danielpmc/ServerMonitor#readme",
+  "homepage": "https://github.com/danbot-devs/DanBotHostingStats#readme",
   "dependencies": {
+    "axios": "^0.21.0",
     "body-parser": "latest",
+    "canvas": "^2.6.1",
     "chalk": "^3.0.0",
-    "ejs": "^3.0.1",
+    "connect-mongo": "^3.2.0",
+    "cookie-parser": "^1.4.5",
+    "csurf": "^1.11.0",
+    "discord.js": "^11.6.4",
+    "ejs": "^3.1.3",
+    "events": "^3.1.0",
     "express": "latest",
     "express-handlebars": "^3.1.0",
-    "helmet": "^3.21.2",
+    "express-rate-limit": "^5.1.3",
+    "express-session": "^1.17.1",
+    "git-repo-info": "^2.1.1",
+    "hbs": "^4.1.1",
+    "helmet": "^3.23.3",
     "http": "latest",
-    "socket.io": "latest"
+    "moment": "^2.27.0",
+    "node-cron": "^2.0.3",
+    "node-fetch": "^2.6.0",
+    "node-proxmox": "^0.1.2",
+    "node-ssh": "^11.1.1",
+    "node-tesseract-ocr": "^2.0.0",
+    "nodemailer": "^6.4.11",
+    "passport": "^0.4.1",
+    "passport-discord": "^0.1.4",
+    "ping": "^0.3.0",
+    "ping-tcp-js": "^1.3.0",
+    "prettysize": "^2.0.0",
+    "proxmox": "^0.1.0",
+    "pterodactyl.js": "^2.1.1",
+    "puppeteer": "^1.20.0",
+    "quick.db": "^7.1.1",
+    "replace-in-file": "^6.1.0",
+    "resolve": "^1.17.0",
+    "socket.io": "latest",
+    "tesseract.js": "^2.1.1",
+    "unirest": "^0.6.0",
+    "validator": "^13.1.1"
   }
 }

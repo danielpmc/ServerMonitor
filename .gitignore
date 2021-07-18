@@ -1,11 +1,17 @@
 .git
+.idea
 
-Panel/node_modules
-Panel/package-lock.json
-Panel/data
+node_modules
+package-lock.json
+data
+config.json
+enable.json
+json.sqlite
+images
+start.bat
+eng.traineddata
+proxy
+animalAPI/dog/*
+animalAPI/cat/*
 
-Daemon/node_modules
-Daemon/package-lock.json
-
-BetaDaemon/node_modules
-BetaDaemon/package-lock.json
+Test/*
